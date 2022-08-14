@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title >سامانه افکار</title>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <div class="fixed-header">
+                    <div class="container">
+                        <nav>
+                            <a href="/main/test">صفحه اصلی</a>
+{#                            <a href="#">About</a>#}
+                            <a href="#">درخواست ها</a>
+                            <a href="#">درباره ما</a>
+                            <a href="#">تماس با ما</a>
+                        </nav>
+                    </div>
+                </div>
+{#            <li>#}
+                <form class="logout-link" action="{% url 'accountapp:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="exit">خروج</button>
+                </form>
+
+{#            </li>#}
+
+
+            {% endif %}
+        </ul>
+    </nav>
+
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>
