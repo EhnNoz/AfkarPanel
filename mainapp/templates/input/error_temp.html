@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+{#    <div class="alert">#}
+{#  <span class="closebtn">error</span>#}
+{#  <strong>اخطار!</strong>خطایی رخ داده است. دوباره تلاش کنید.#}
+{#</div>#}
+
+    <p style="color:black; ">خطایی رخ داده است. دوباره تلاش کنید.</p>
+
+  <p><a href="{% url 'mainapp:test' %}">بازگشت</a></p>
+{% endblock %}

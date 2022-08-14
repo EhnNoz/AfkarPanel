@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="intro">
+    <h1>
+    گزارش شما در حال آماده سازی است.
+    </h1>
+        </div>
+
+    <div class="id-info">
+    شماره گزارش شما
+    {{ info }}
+    است.
+    </div>
+    {#<script src="https://cdn.amcharts.com/lib/4/core.js"></script>#}
+{#<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>#}
+{#<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>#}
+<script src="{% static 'slugify.js' %}"></script>
+{#    <div id="chartdiv"></div>#}
+{% endblock %}
+
+{#<!DOCTYPE html>#}
+{#<body>#}
+{#    <div style="width: 40%;#}
+{#    border: 1px solid black;#}
+{#    background-color: lightcyan;#}
+{#    font-family: Helvetica, sans-serif;">#}
+{#        <div style="margin: 5%;">#}
+{#            <h1>#}
+{#                <u>Dictionary Data</u>#}
+{#            </h1>#}
+{#            <h2>#}
+{#                <u>All Data</u>#}
+{#            </h2>#}
+{#            <h4 id='alldata'></h4><br>#}
+{#            <h2>#}
+{#                <u>Neat Data</u>#}
+{#            </h2>#}
+{#            <h4 id='neatdata'></h4>#}
+{#        </div>#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}
+{#<script>#}
+{#    var data = JSON.parse("{{data|escapejs}}");#}
+{#    var dataNode = document.getElementById('alldata');#}
+{#    dataNode.innerHTML+="{{data|escapejs}}";#}
+{#    dataNode = document.getElementById('neatdata');#}
+{#    for(var x in data){#}
+{#        dataNode.innerHTML+=x+' : '+data[x]+'<br><br>';#}
+{#    }#}
+{#</script>#}
+
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>#}
+{#<body>#}
+{#{% for x in info %}#}
+{#a: {{ x.subject }}#}
+{#{% endfor %}#}
+{#<canvas id="myChart" style="width:100%;max-width:600px"></canvas>#}
+{##}
+{#<script>#}
+{#var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];#}
+{#var yValues = [55, 49, 44, 24, 15];#}
+{#var barColors = [#}
+{#  "#b91d47",#}
+{#  "#00aba9",#}
+{#  "#2b5797",#}
+{#  "#e8c3b9",#}
+{#  "#1e7145"#}
+{#];#}
+{##}
+{#new Chart("myChart", {#}
+{#  type: "pie",#}
+{#  data: {#}
+{#    labels: xValues,#}
+{#    datasets: [{#}
+{#      backgroundColor: barColors,#}
+{#      data: yValues#}
+{#    }]#}
+{#  },#}
+{#  options: {#}
+{#    title: {#}
+{#      display: true,#}
+{#      text: "World Wide Wine Production 2018"#}
+{#    }#}
+{#  }#}
+
+{#</script>#}
+{##}
+{#</body>#}
+{#</html>#}

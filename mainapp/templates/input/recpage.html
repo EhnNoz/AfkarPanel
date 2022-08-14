@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="rec-intro">
+    <h1>
+    شماره گزارش خود را وارد نمایید.
+    </h1>
+        </div>
+
+{#    <form class="site-form" action="{% url 'mainapp:rec' %}" method="post" enctype="multipart/form-data">#}
+{#        {% csrf_token %}#}
+{#        {{form}}#}
+{##}
+{#        <input type="submit" value="ارسال">#}
+{#    </form>#}
+
+{#    <form method="GET" action="{% url 'mainapp:rec' %}" id="searchform">#}
+{#    <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>#}
+{#    </form>#}
+
+    <form method="get" action="{% url 'mainapp:rec' %}" class="navbar-form pull-right">
+<input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder="Search">
+<input type="submit" class="btn" value="بگرد" >
+    <div class="rec-answer">
+
+          {{ form }}
+    </div>
+
+</form>
+
+<form class="report-link" action="{% url 'mainapp:recback' %}" method="post">
+           {% csrf_token %}
+           <button type="submit" class="rec">برگرد</button>
+</form>
+
+{% endblock %}

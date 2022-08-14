@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{#  <div class="header">#}
+{#    <a href="#default" class="logo" dir="rtl">اتاق وضعیت</a>#}
+{#    <div class="header-right" dir="rtl">#}
+{#      <a class="active" href="#home" dir="rtl">Home</a>#}
+{#      <a href="#contact" dir="rtl">Contact</a>#}
+{#      <a href="#about" dir="rtl">About</a>#}
+{#    </div>#}
+{#  </div>#}
+
+{#        <div class="fixed-header">#}
+{#        <div class="container">#}
+{#            <nav>#}
+{#                <a href="#">Home</a>#}
+{#                <a href="#">About</a>#}
+{#                <a href="#">Products</a>#}
+{#                <a href="#">Services</a>#}
+{#                <a href="#">Contact Us</a>#}
+{#            </nav>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="intro">
+    <h3 class="notif">
+    این سامانه بصورت آزمایشی راه اندازی شده است.
+    </h3>
+
+        </div>
+    <div class="flex-container">
+
+
+        <li>
+          <a href="{% url 'mainapp:simple_sentiment' %}">سرویس تعیین قطبیت</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:multi_sentiment' %}">سرویس تحلیل احساسات</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:simple_orient' %}">سرویس تعیین قطبیت سیاسی</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:multi_orient' %}">سرویس تحلیل گرایش سیاسی (1)</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:bias' %}">سرویس تحلیل گرایش سیاسی (2)</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:calc_hashtag' %}">ابر هشتگ</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:calc_emoji' %}">ابر ایموجی</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:calc_keyword' %}">ابر عبارات</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+        <li>
+          <a href="{% url 'mainapp:complete_report' %}">گزارشگیری کامل</a>
+    {#        {% csrf_token %}#}
+        </li>
+
+    </div>
+
+{% endblock %}

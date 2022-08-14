@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="bias_form">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+{#    <input type="hidden" name="csrfmiddlewaretoken" value="1nFG9bfNQOVSHdIvcxc4noYGJt9mlid5c8pv8C53AcebsB2UiKNLZNPWJEVR7UR1">#}
+{#    <p><label for="id_platform">پلتفرم:</label> <select name="platform" required id="id_platform">#}
+{#    <option value="" selected>---------</option>#}
+{##}
+{#    <option value="intagram">Instagram</option>#}
+{##}
+{#    <option value="telegram">Telegram</option>#}
+{##}
+{#    <option value="twitter">Twitter</option>#}
+{##}
+{#    </select></p>#}
+{#    <p><label for="id_column">نام ستون:</label> <input type="text" name="column" maxlength="20" required id="id_column"></p>#}
+{#    <p><label for="id_req_file">بارگذاری فایل:</label> <input type="file" name="req_file" required id="id_req_file"></p>#}
+
+    <button type="submit" class="docu">شروع کن</button>
+  </form>
+    </div>
+
+
+
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+{#  <p><a href="{% url 'mainapp:test' %}" class="back">بازگشت</a></p>#}
+
+
+
+
+
+{% endblock %}

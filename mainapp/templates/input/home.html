@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>
+
+       این سامانه آزمایشی و جهت فقط تست میباشد.
+  </h3>
+    <p style="color:#ff0000 !important">why do you leave me ??</p>
+
+  <ul dir="rtl">
+
+    <li>
+      <a href="{% url 'bias_detect' %}">گرایش سیاسی رسمی</a>
+        {% csrf_token %}
+    </li>
+{#    <li>#}
+{#      <a href="{% url 'biasfunc' %}">سوگیری رسمی</a>#}
+{#    </li>#}
+{#    <li>#}
+{#      <a href="{% url 'sentimentfunc' %}">تحلیل احساسات سه گانه</a>#}
+{#    </li>#}
+{##}
+{#    <li>#}
+{#      <a href="{% url 'multisentimentfunc' %}">تحلیل احساسات هفت گانه</a>#}
+{#    </li>#}
+{##}
+{#    <li>#}
+{#      <a href="{% url 'simpleparty' %}">سوگیری کاربر دوگانه (هوش مصنوعی)</a>#}
+{#    </li>#}
+{##}
+{#    <li>#}
+{#      <a href="{% url 'multiparty' %}">سوگیری کاربر شش گانه (هوش مصنوعی)</a>#}
+{#    </li>#}
+{##}
+{#    <li>#}
+{#      <a href="{% url 'hashtagfunc' %}">فراوانی هشتگ</a>#}
+{#    </li>#}
+{##}
+{##}
+{#    <li>#}
+{#      <a href="{% url 'emojifunc' %}">فراوانی ایموجی</a>#}
+{#    </li>#}
+
+  </ul>
+{##}
+{#  <p>Uploaded files:</p>#}
+{#  <ul>#}
+{#    {% for obj in documents %}#}
+{#      <li>#}
+{#        <a href="{{ obj.document.url }}">{{ obj.document.name }}</a>#}
+{#        <small>(Uploaded at: {{ obj.uploaded_at }})</small>#}
+{#      </li>#}
+{#    {% endfor %}#}
+{#  </ul>#}
+{% endblock %}

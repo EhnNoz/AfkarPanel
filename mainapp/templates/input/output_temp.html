@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+  {% if uploaded_file_url %}
+    <p dir="rtl">فایل را دریافت نمایید: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+  <p><a href="{% url 'mainapp:test' %}">بازگشت</a></p>
+{% endblock %}
